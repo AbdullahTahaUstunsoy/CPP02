@@ -1,7 +1,7 @@
 #include "Fixed.hpp"
 #include <iostream>
 
-Fixed::Fixed() : raw_value(0)
+Fixed::Fixed() : rawValue(0)
 {
     std::cout << "Default constructor called" <<std::endl;
 }
@@ -9,14 +9,14 @@ Fixed::Fixed() : raw_value(0)
 Fixed::Fixed(const Fixed& ref)
 {
     std::cout << "Copy constructor called" <<std::endl;
-    raw_value = ref.getRawBits();
+    rawValue = ref.getRawBits();
 }
 
 Fixed& Fixed::operator=(const Fixed& ref)
 {
     std::cout << "Copy assignment operator called" <<std::endl;
     if (this != &ref) //kendini kendine atamaması için //this genel anlamda isim çakışmasını önlemek için kullanılır fakat burada kullanmak zorundayım çünkü alternatifi yok
-        raw_value = ref.getRawBits();
+        rawValue = ref.getRawBits();
     return *this;
 }
 
@@ -28,10 +28,10 @@ Fixed::~Fixed()
 int Fixed::getRawBits() const
 {
     std::cout << "getRawBits member function called" << std::endl;
-    return raw_value;
+    return rawValue;
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    raw_value = raw;
+    rawValue = raw;
 }
