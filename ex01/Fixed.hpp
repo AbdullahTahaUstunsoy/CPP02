@@ -1,7 +1,7 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
-#include <cmath>
-#include <iostream>
+
+#include <ostream>
 
 class Fixed 
 {
@@ -10,8 +10,8 @@ class Fixed
         static const int fractionalBits = 8;
     public:
         Fixed();
-        Fixed(const Fixed& other); //copy constructor //var olan nesnenin aynısı olan yeni bir nesne oluşturmak için
-        Fixed& operator=(const Fixed& other); //copy assignment operator //var olan bir nesneye başka  bir nesnenin değerlerini atamak için
+        Fixed(const Fixed& other);
+        Fixed& operator=(const Fixed& other);
         ~Fixed();
         Fixed(const int intValue);
         Fixed(const float floatValue);
